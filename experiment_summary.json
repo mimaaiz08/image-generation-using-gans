@@ -1,0 +1,40 @@
+{
+  "project": "Image Generation Using GANs",
+  "dataset": {
+    "source": "RajkumarGalaxy/cake",
+    "processed_images": 231,
+    "image_size": "64x64 RGB"
+  },
+  "experiments": [
+    {
+      "name": "DCGAN",
+      "training_epochs": 12,
+      "result": "Generated images remained noise-like"
+    },
+    {
+      "name": "WGAN-GP fine-tuned from DCGAN",
+      "training_epochs": 2,
+      "result": "Generated images remained noise-like"
+    },
+    {
+      "name": "Fresh WGAN-GP",
+      "training_epochs": 5,
+      "result": "Generated images remained noise-like"
+    },
+    {
+      "name": "WGAN-GP fixed-batch diagnostic",
+      "training_steps": 100,
+      "result": "Produced coarse blurry patterns on a fixed batch"
+    },
+    {
+      "name": "Balanced full-dataset WGAN-GP",
+      "training_epochs": 5,
+      "result": "Low-diversity, noise-like images"
+    }
+  ],
+  "limitations": [
+    "Small dataset of 231 images",
+    "Generated samples did not become recognizable cakes",
+    "Training losses alone do not demonstrate image quality"
+  ]
+}

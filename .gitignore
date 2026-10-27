@@ -1,0 +1,23 @@
+# Datasets
+dataset/
+*.zip
+
+# Other model checkpoints
+checkpoints/*_critic*.pth
+checkpoints/*discriminator*.pth
+checkpoints/generator_latest.pth
+checkpoints/generator_after_test.pth
+checkpoints/dcgan_epoch12_generator.pth
+checkpoints/wgan_clean_generator_latest.pth
+checkpoints/wgan_gp_generator_test.pth
+checkpoints/wgan_fixed_batch_generator.pth
+
+# Secrets and local environments
+.env
+.env.*
+*.pem
+*.key
+.venv/
+venv/
+__pycache__/
+.ipynb_checkpoints/
